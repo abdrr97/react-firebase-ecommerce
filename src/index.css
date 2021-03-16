@@ -17,6 +17,9 @@ body {
   background-color: var(--clr-primary);
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header__logo {
@@ -35,11 +38,21 @@ body {
   padding: 15px;
   border: none;
   width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.header__search-button {
+  border: none;
+  cursor: pointer;
+  background-color: var(--clr-gold);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .header__search-icon {
-  padding: 10px;
+  padding: 5px 10px;
   height: 22px;
-  background-color: var(--clr-gold);
+  font-size: 20px;
 }
 
 .header__nav {
@@ -60,11 +73,13 @@ body {
 
 .header__nav-option span:first-child {
   font-size: 10px;
+  font-weight: 400;
 }
 .header__nav-option span:last-child {
   font-size: 13px;
   font-weight: 800;
 }
+
 .header__nav-option-basket {
   display: flex;
   align-items: center;
@@ -77,4 +92,15 @@ body {
   font-weight: 800;
   margin: 0 10px;
   color: var(--clr-gold);
+}
+
+/* ******** Home.jsx ********* */
+
+.home {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.home__banner {
+  width: 100%;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
